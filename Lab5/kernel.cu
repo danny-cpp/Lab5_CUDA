@@ -18,18 +18,46 @@ inline void gpuAssert(cudaError_t code, const char *file, int line,
 }
 
 __global__ void binning(unsigned int* input_array, unsigned int* bin_array, int input_length, int bin_num) {
-	int i = blockDim.x*blockIdx.x + threadIdx.x;
-
+	
+	//int i = blockDim.x*blockIdx.x + threadIdx.x;
 	//int stride = blockDim.x*gridDim.x;
 
-	if (i < input_length) {
-		unsigned int position = input_array[i];
-		if (position >= 0 && position < NUM_BINS) {
-			if (bin_array[position] < 127)
-				atomicAdd(&bin_array[position], 1);
-			
-		}
+	////__shared__ unsigned int share_mem[NUM_BINS];
+	////share_mem[threadIdx.x] = 0;
+	////__syncthreads();
+
+
+	//while (i < bin_num) {
+	//	unsigned int position = input_array[i];
+	//	if (position < NUM_BINS) {
+	//		atomicAdd(&bin_array[position], 1);
+	//	}
+	//	i += stride;
+	//}
+	//__syncthreads();
+
+	//
+	////bin_array[threadIdx.x] = share_mem[threadIdx.x];
+	//
+
+	__shared__ unsigned int temp[NUM_BINS];
+	temp[threadIdx.x] = 0;
+	__syncthreads();
+
+	int i = threadIdx.x;
+	int stride = blockDim.x;
+
+	for (i; i < input_length; i+= stride) {
+		atomicAdd(&temp[input_array[i]], 1);
 	}
+	__syncthreads();
+
+	int k = threadIdx.x;
+	for (k; k < NUM_BINS; k += stride) {
+		bin_array[k] = temp[k];
+	}
+	//bin_array[threadIdx.x] = temp[threadIdx.x];
+
 }
 
 __global__ void limmiting(unsigned int* bin_array, int bin_num) {
@@ -92,7 +120,7 @@ int main(int argc, char *argv[]) {
 
 	binning<<<block_num, thread_num>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
 
-	limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
+	//limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
 
 
 	// You should call the following lines after you call the kernel.
