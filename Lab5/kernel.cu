@@ -55,6 +55,10 @@ __global__ void binning(unsigned int* input_array, unsigned int* bin_array, int 
 	int k = threadIdx.x;
 	for (k; k < NUM_BINS; k += stride) {
 		bin_array[k] = temp[k];
+		//if (temp[k] <= 127)
+		//	bin_array[k] = temp[k];
+		//else
+		//	bin_array[k] = 127;
 	}
 	//bin_array[threadIdx.x] = temp[threadIdx.x];
 
@@ -116,11 +120,11 @@ int main(int argc, char *argv[]) {
 
 	// TODO: Perform kernel computation here
 	int thread_num = 256;
-	int block_num = (NUM_BINS + inputLength + thread_num - 1) / thread_num;
+	int block_num = (NUM_BINS*2 + inputLength + thread_num - 1) / thread_num;
 
 	binning<<<block_num, thread_num>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
 
-	//limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
+	limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
 
 
 	// You should call the following lines after you call the kernel.
