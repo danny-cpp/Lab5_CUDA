@@ -36,9 +36,8 @@ __global__ void limmiting(unsigned int* bin_array, int bin_num) {
 	int i = blockDim.x*blockIdx.x + threadIdx.x;
 
 	if (i < bin_num) {
-		if (bin_array[i] > 127) {
+		if (bin_array[i] > 127)
 			bin_array[i] = 127;
-		}
 	}
 }
 
@@ -88,7 +87,7 @@ int main(int argc, char *argv[]) {
 
 	// TODO: Perform kernel computation here
 	int thread_num = 256;
-	int block_num = (NUM_BINS + inputLength + thread_num - 1) / thread_num;
+	int block_num = (NUM_BINS + thread_num - 1) / thread_num;
 
 	binning<<<block_num, thread_num>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
 

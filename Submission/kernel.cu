@@ -24,14 +24,21 @@ __global__ void binning(unsigned int* input_array, unsigned int* bin_array, int 
 
 	if (i < input_length) {
 		unsigned int position = input_array[i];
-		if (position >= 0 && position < (NUM_BINS - 1)) {
-			atomicAdd(&bin_array[position],  1);
+		if (position >= 0 && position < NUM_BINS) {
+			if (bin_array[position] < 127)
+				atomicAdd(&bin_array[position], 1);
+			
 		}
-		//if (position >= 0 && position < NUM_BINS) {
-		//	//atomicAdd(&(bin_array[position]), 1);
-		//	bin_array[position] = 1;
-		//}
-		//i += stride;
+	}
+}
+
+__global__ void limmiting(unsigned int* bin_array, int bin_num) {
+	int i = blockDim.x*blockIdx.x + threadIdx.x;
+
+	if (i < bin_num) {
+		if (bin_array[i] > 127) {
+			bin_array[i] = 127;
+		}
 	}
 }
 
@@ -81,9 +88,11 @@ int main(int argc, char *argv[]) {
 
 	// TODO: Perform kernel computation here
 	int thread_num = 256;
-	int block_num = (inputLength + thread_num - 1) / thread_num;
+	int block_num = (NUM_BINS + inputLength + thread_num - 1) / thread_num;
 
 	binning<<<block_num, thread_num>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
+
+	limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
 
 
 	// You should call the following lines after you call the kernel.
