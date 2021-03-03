@@ -32,12 +32,32 @@ __global__ void binning(unsigned int* input_array, unsigned int* bin_array, int 
 	}
 }
 
+__global__ void binningFast(unsigned int* input_array, unsigned int* bin_array, int input_length, int bin_num) {
+	__shared__ unsigned int temp[NUM_BINS];
+	temp[threadIdx.x] = 0;
+	__syncthreads();
+
+	int i = threadIdx.x;
+	int stride = blockDim.x;
+
+	for (i; i < input_length; i += stride) {
+		atomicAdd(&temp[input_array[i]], 1);
+	}
+	__syncthreads();
+
+	int k = threadIdx.x;
+	for (k; k < NUM_BINS; k += stride) {
+		bin_array[k] = temp[k];
+	}
+}
+
 __global__ void limmiting(unsigned int* bin_array, int bin_num) {
 	int i = blockDim.x*blockIdx.x + threadIdx.x;
 
 	if (i < bin_num) {
-		if (bin_array[i] > 127)
+		if (bin_array[i] > 127) {
 			bin_array[i] = 127;
+		}
 	}
 }
 
@@ -87,9 +107,10 @@ int main(int argc, char *argv[]) {
 
 	// TODO: Perform kernel computation here
 	int thread_num = 256;
-	int block_num = (NUM_BINS + thread_num - 1) / thread_num;
+	int block_num = (NUM_BINS + inputLength + thread_num - 1) / thread_num;
 
-	binning<<<block_num, thread_num>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
+	//binning<<<block_num, thread_num>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
+	binningFast << <block_num, thread_num >> >(deviceInput, deviceBins, inputLength, NUM_BINS);
 
 	limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
 
