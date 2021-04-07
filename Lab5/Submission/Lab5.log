@@ -1,46 +1,38 @@
-﻿Build started 2021-03-02 7:09:16 PM.
-     1>Project "D:\Study\DEV\CUDA\Lab5\Lab5\Lab5.vcxproj" on node 2 (Rebuild target(s)).
-     1>CudaClean:
-         cmd.exe /C "C:\Users\huuda\AppData\Local\Temp\tmp310d6327a7f64c48ad0446b545866d60.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"     --keep-dir x64\Submission -maxrregcount=0  --machine 64 --compile      -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD " -o Submission\kernel.cu.obj "D:\Study\DEV\CUDA\Lab5\Lab5\kernel.cu" -clean
-         
-         D:\Study\DEV\CUDA\Lab5\Lab5>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"     --keep-dir x64\Submission -maxrregcount=0  --machine 64 --compile      -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD " -o Submission\kernel.cu.obj "D:\Study\DEV\CUDA\Lab5\Lab5\kernel.cu" -clean 
-         kernel.cu
-       AddCudaCompileDeps:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /DNDEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I. /FIcuda_runtime.h /c D:\Study\DEV\CUDA\Lab5\Lab5\kernel.cu 
+﻿Build started 2021-04-07 1:14:43 PM.
+     1>Project "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\Lab5.vcxproj" on node 2 (Build target(s)).
+     1>AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /DNDEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I. /FIcuda_runtime.h /c "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\kernel.cu" 
        CudaBuild:
          Compiling CUDA source file kernel.cu...
-         cmd.exe /C "C:\Users\huuda\AppData\Local\Temp\tmp63152cb4b0ce4d7697e0b993dae3e187.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"     --keep-dir x64\Submission -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD " -o Submission\kernel.cu.obj "D:\Study\DEV\CUDA\Lab5\Lab5\kernel.cu"
+         cmd.exe /C "C:\Users\danh\AppData\Local\Temp\tmpda44df298a9446e4bca422352227f42b.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"     --keep-dir x64\Submission -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD " -o Submission\kernel.cu.obj "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\kernel.cu"
          
-         D:\Study\DEV\CUDA\Lab5\Lab5>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"     --keep-dir x64\Submission -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD " -o Submission\kernel.cu.obj "D:\Study\DEV\CUDA\Lab5\Lab5\kernel.cu" 
-     1>D:/Study/DEV/CUDA/Lab5/Lab5/kernel.cu(27): warning : pointless comparison of unsigned integer with zero
-     1>D:/Study/DEV/CUDA/Lab5/Lab5/kernel.cu(43): warning : expression has no effect
-     1>D:/Study/DEV/CUDA/Lab5/Lab5/kernel.cu(49): warning : expression has no effect
-     1>D:/Study/DEV/CUDA/Lab5/Lab5/kernel.cu(27): warning : pointless comparison of unsigned integer with zero
-     1>D:/Study/DEV/CUDA/Lab5/Lab5/kernel.cu(43): warning : expression has no effect
-     1>D:/Study/DEV/CUDA/Lab5/Lab5/kernel.cu(49): warning : expression has no effect
+         C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"     --keep-dir x64\Submission -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD " -o Submission\kernel.cu.obj "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\kernel.cu" 
+     1>C:/Users/danh/Desktop/New folder/Lab5_CUDA/Lab5/kernel.cu(27): warning : pointless comparison of unsigned integer with zero
+     1>C:/Users/danh/Desktop/New folder/Lab5_CUDA/Lab5/kernel.cu(48): warning : pointless comparison of unsigned integer with zero
+     1>C:/Users/danh/Desktop/New folder/Lab5_CUDA/Lab5/kernel.cu(27): warning : pointless comparison of unsigned integer with zero
+     1>C:/Users/danh/Desktop/New folder/Lab5_CUDA/Lab5/kernel.cu(48): warning : pointless comparison of unsigned integer with zero
          kernel.cu
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Study\DEV\CUDA\Lab5\Submission\Lab5.exe" /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64" wb.lib cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Study\DEV\CUDA\Lab5\Submission\Lab5.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Study\DEV\CUDA\Lab5\Submission\Lab5.lib" /MACHINE:X64 Submission\kernel.cu.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\Lab5.exe" /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64" wb.lib cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\Lab5.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\Lab5.lib" /MACHINE:X64 Submission\kernel.cu.obj
          LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
-         Lab5.vcxproj -> D:\Study\DEV\CUDA\Lab5\Submission\Lab5.exe
+         Lab5.vcxproj -> C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\Lab5.exe
        PostBuildEvent:
-         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "D:\Study\DEV\CUDA\Lab5\Submission\"
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "D:\Study\DEV\CUDA\Lab5\Submission\"
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\"
          
-         echo copy "D:\Study\DEV\CUDA\Lab5\Lab5\\kernel.cu" "D:\Study\DEV\CUDA\Lab5\Submission\"
-         copy "D:\Study\DEV\CUDA\Lab5\Lab5\\kernel.cu" "D:\Study\DEV\CUDA\Lab5\Submission\"
+         echo copy "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\\kernel.cu" "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\"
+         copy "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\\kernel.cu" "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\"
          
-         DEL "D:\Study\DEV\CUDA\Lab5\Submission\*.pdb"
+         DEL "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\*.pdb"
          :VCEnd
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "D:\Study\DEV\CUDA\Lab5\Submission\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64*.dll" "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\"
          C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64_75.dll
                  1 file(s) copied.
-         copy "D:\Study\DEV\CUDA\Lab5\Lab5\\kernel.cu" "D:\Study\DEV\CUDA\Lab5\Submission\"
+         copy "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\\kernel.cu" "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Submission\"
                  1 file(s) copied.
-     1>Done Building Project "D:\Study\DEV\CUDA\Lab5\Lab5\Lab5.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\danh\Desktop\New folder\Lab5_CUDA\Lab5\Lab5.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.80
+Time Elapsed 00:00:10.44

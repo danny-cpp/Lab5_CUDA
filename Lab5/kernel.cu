@@ -37,17 +37,27 @@ __global__ void binningFast(unsigned int* input_array, unsigned int* bin_array, 
 	temp[threadIdx.x] = 0;
 	__syncthreads();
 
-	int i = threadIdx.x;
-	int stride = blockDim.x;
+	//int i = threadIdx.x;
+	//int stride = blockDim.x;
 
-	for (i; i < input_length; i += stride) {
-		atomicAdd(&temp[input_array[i]], 1);
+	int i = blockDim.x*blockIdx.x + threadIdx.x;
+
+	if (i < input_length) {
+		// atomicAdd(&temp[input_array[i]], 1);
+		unsigned int position = input_array[i];
+		if (position >= 0 && position < NUM_BINS) {
+			if (bin_array[position] < 127)
+				atomicAdd(&temp[position], 1);
+
+		}
 	}
 	__syncthreads();
 
-	int k = threadIdx.x;
-	for (k; k < NUM_BINS; k += stride) {
+	// int k = threadIdx.x;
+	int k = blockDim.x*blockIdx.x + threadIdx.x;
+	if (k < input_length) {
 		bin_array[k] = temp[k];
+		//atomicAdd(&bin_array[k], temp[k]);
 	}
 }
 
@@ -110,9 +120,11 @@ int main(int argc, char *argv[]) {
 	int block_num = (NUM_BINS + inputLength + thread_num - 1) / thread_num;
 
 	//binning<<<block_num, thread_num>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
-	binningFast << <block_num, thread_num >> >(deviceInput, deviceBins, inputLength, NUM_BINS);
-
-	limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
+	binning << <block_num, thread_num >> >(deviceInput, deviceBins, inputLength, NUM_BINS);
+	
+	
+	CUDA_CHECK(cudaDeviceSynchronize());
+	//limmiting << <block_num, thread_num >> >(deviceBins, NUM_BINS);
 
 
 	// You should call the following lines after you call the kernel.

@@ -380,7 +380,7 @@ c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_launch_pa
 c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\vector_types.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\device_launch_parameters.h
-D:\Study\DEV\CUDA\Lab5\libwb/include\wb.h
+C:\Users\danh\Desktop\New folder\Lab5_CUDA\libwb/include\wb.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl
@@ -591,7 +591,7 @@ C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsvc.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\mcx.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\imm.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\ime_cmodes.h
-d:\study\dev\cuda\lab5\libwb\include\vendor/json11.hpp
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\vendor/json11.hpp
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\iterator
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\istream
@@ -669,17 +669,17 @@ C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\tuple
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\memory
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdint.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
-d:\study\dev\cuda\lab5\libwb\include\wbTypes.h
-d:\study\dev\cuda\lab5\libwb\include\wbAssert.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbTypes.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbAssert.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
-d:\study\dev\cuda\lab5\libwb\include\wbMalloc.h
-d:\study\dev\cuda\lab5\libwb\include\wbString.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbMalloc.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbString.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\iostream
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\sstream
-d:\study\dev\cuda\lab5\libwb\include\wb.h
-d:\study\dev\cuda\lab5\libwb\include\wbUtils.h
-d:\study\dev\cuda\lab5\libwb\include\vendor/sole.hpp
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wb.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbUtils.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\vendor/sole.hpp
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\functional
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\xfunctional
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\memory.h
@@ -709,27 +709,27 @@ C:\Program Files (x86)\Windows Kits\8.1\Include\shared\packoff.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\iptypes.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\tcpestats.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\netioapi.h
-d:\study\dev\cuda\lab5\libwb\include\wbArg.h
-d:\study\dev\cuda\lab5\libwb\include\wbCUDA.h
-d:\study\dev\cuda\lab5\libwb\include\wbCast.h
-d:\study\dev\cuda\lab5\libwb\include\wbComparator.h
-d:\study\dev\cuda\lab5\libwb\include\wb.h
-d:\study\dev\cuda\lab5\libwb\include\wbDirectory.h
-d:\study\dev\cuda\lab5\libwb\include\wbExit.h
-d:\study\dev\cuda\lab5\libwb\include\wbExport.h
-d:\study\dev\cuda\lab5\libwb\include\wb.h
-d:\study\dev\cuda\lab5\libwb\include\wbFile.h
-d:\study\dev\cuda\lab5\libwb\include\wbPPM.h
-d:\study\dev\cuda\lab5\libwb\include\wbImage.h
-d:\study\dev\cuda\lab5\libwb\include\wbImport.h
-d:\study\dev\cuda\lab5\libwb\include\wbInit.h
-d:\study\dev\cuda\lab5\libwb\include\wbLogger.h
-d:\study\dev\cuda\lab5\libwb\include\wbMD5.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbArg.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbCUDA.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbCast.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbComparator.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wb.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbDirectory.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbExit.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbExport.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wb.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbFile.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbPPM.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbImage.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbImport.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbInit.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbLogger.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbMD5.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\sys/types.h
-d:\study\dev\cuda\lab5\libwb\include\wbMPI.h
-d:\study\dev\cuda\lab5\libwb\include\wbSolution.h
-d:\study\dev\cuda\lab5\libwb\include\wbSparse.h
-d:\study\dev\cuda\lab5\libwb\include\wbThrust.h
-d:\study\dev\cuda\lab5\libwb\include\wbTimer.h
-d:\study\dev\cuda\lab5\libwb\include\wbPath.h
-d:\study\dev\cuda\lab5\libwb\include\wbDataset.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbMPI.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbSolution.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbSparse.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbThrust.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbTimer.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbPath.h
+c:\users\danh\desktop\new folder\lab5_cuda\libwb\include\wbDataset.h
